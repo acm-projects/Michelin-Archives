@@ -1,4 +1,4 @@
-package com.example.michelin_archives
+package com.example.michelin_archives1
 
 import io.flutter.embedding.android.FlutterActivity
 
