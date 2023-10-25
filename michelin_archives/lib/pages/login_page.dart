@@ -124,8 +124,6 @@ class LoginPage extends StatelessWidget {
                 child: Container(
                   width: 158,
                   height: 34,
-                  //padding: const EdgeInsets.only(
-                  // top: 7, left: 4, right: 5, bottom: 8),
                   clipBehavior: Clip.antiAlias,
                   decoration: ShapeDecoration(
                     color: Color(0xFFBC9573),
@@ -134,7 +132,6 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   child: Row(
-                    //mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -177,6 +174,18 @@ class LoginPage extends StatelessWidget {
                       )
                     ],
                   ),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(5, 10, 5, 5),
+                    child: TextFormField(
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontFamily: 'Georgia',
+                        fontWeight: FontWeight.w400,
+                        height: 0,
+                      ),
+                    ),
+                  ),
                 ),
               ),
               Positioned(
@@ -200,6 +209,18 @@ class LoginPage extends StatelessWidget {
                         spreadRadius: 0,
                       )
                     ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(5, 10, 5, 5),
+                    child: TextFormField(
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontFamily: 'Georgia',
+                        fontWeight: FontWeight.w400,
+                        height: 0,
+                      ),
+                    ),
                   ),
                 ),
               ),
