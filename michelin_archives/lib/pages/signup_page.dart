@@ -182,6 +182,18 @@ class SignUpPage extends StatelessWidget {
                       )
                     ],
                   ),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(5, 10, 5, 5),
+                    child: TextFormField(
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontFamily: 'Georgia',
+                        fontWeight: FontWeight.w400,
+                        height: 0,
+                      ),
+                    ),
+                  ),
                 ),
               ),
               Positioned(
@@ -204,6 +216,18 @@ class SignUpPage extends StatelessWidget {
                         spreadRadius: 0,
                       )
                     ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(5, 10, 5, 5),
+                    child: TextFormField(
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontFamily: 'Georgia',
+                        fontWeight: FontWeight.w400,
+                        height: 0,
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -228,6 +252,18 @@ class SignUpPage extends StatelessWidget {
                         spreadRadius: 0,
                       )
                     ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(5, 10, 5, 5),
+                    child: TextFormField(
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontFamily: 'Georgia',
+                        fontWeight: FontWeight.w400,
+                        height: 0,
+                      ),
+                    ),
                   ),
                 ),
               ),
