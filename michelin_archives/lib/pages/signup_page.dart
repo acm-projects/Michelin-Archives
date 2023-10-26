@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:michelin_archives/pages/login_page.dart';
 
 void main() {
   runApp(const FigmaToCodeAppSign());
@@ -26,6 +27,17 @@ class FigmaToCodeAppSign extends StatelessWidget {
 }
 
 class SignUpPage extends StatelessWidget {
+  void _navigateToLogIn(BuildContext context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => LoginPage()));
+  }
+
+  //if needed
+  /* void _navigateToCollections(BuildContext context) {
+    Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => SignUpPage())); ////CHANGE PAGE
+  } */
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -105,7 +117,9 @@ class SignUpPage extends StatelessWidget {
                     children: [
                       SizedBox(
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            _navigateToLogIn(context);
+                          },
                           child: Text(
                             'Sign Up!',
                             textAlign: TextAlign.center,
@@ -143,7 +157,9 @@ class SignUpPage extends StatelessWidget {
                     children: [
                       SizedBox(
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            _navigateToLogIn(context);
+                          },
                           child: Text(
                             'Already Have an Account?',
                             textAlign: TextAlign.center,
@@ -182,6 +198,7 @@ class SignUpPage extends StatelessWidget {
                       )
                     ],
                   ),
+                  /*
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(5, 10, 5, 5),
                     child: TextFormField(
@@ -194,6 +211,7 @@ class SignUpPage extends StatelessWidget {
                       ),
                     ),
                   ),
+                  */
                 ),
               ),
               Positioned(
@@ -217,6 +235,7 @@ class SignUpPage extends StatelessWidget {
                       )
                     ],
                   ),
+                  /*
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(5, 10, 5, 5),
                     child: TextFormField(
@@ -229,6 +248,7 @@ class SignUpPage extends StatelessWidget {
                       ),
                     ),
                   ),
+                  */
                 ),
               ),
               Positioned(
@@ -253,7 +273,7 @@ class SignUpPage extends StatelessWidget {
                       )
                     ],
                   ),
-                  child: Padding(
+                  /*child: Padding(
                     padding: const EdgeInsets.fromLTRB(5, 10, 5, 5),
                     child: TextFormField(
                       style: TextStyle(
@@ -264,7 +284,7 @@ class SignUpPage extends StatelessWidget {
                         height: 0,
                       ),
                     ),
-                  ),
+                  ), */
                 ),
               ),
               Positioned(

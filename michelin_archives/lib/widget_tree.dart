@@ -1,6 +1,6 @@
 import 'package:michelin_archives/auth.dart';
 import 'package:michelin_archives/pages/home_page.dart';
-import 'package:michelin_archives/pages/login_register_page.dart';
+import 'package:michelin_archives/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 class WidgetTree extends StatefulWidget {
@@ -19,7 +19,7 @@ class _WidgetTreeState extends State<WidgetTree> {
         if (snapshot.hasData) {
           return HomePage();
         } else {
-          return const LoginPage();
+          return LoginPage();
         }
       },
     );
