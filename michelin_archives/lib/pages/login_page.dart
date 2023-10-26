@@ -26,6 +26,16 @@ class FigmaToCodeApp extends StatelessWidget {
 }
 
 class LoginPage extends StatelessWidget {
+  void _navigateToSignUp(BuildContext context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => SignUpPage()));
+  }
+
+  void _navigateToCollections(BuildContext context) {
+    Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => SignUpPage())); ////CHANGE PAGE
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -101,7 +111,9 @@ class LoginPage extends StatelessWidget {
                     children: [
                       SizedBox(
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            _navigateToCollections(context);
+                          },
                           child: const Text(
                             'Login',
                             textAlign: TextAlign.start,
@@ -136,7 +148,9 @@ class LoginPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          _navigateToSignUp(context);
+                        },
                         child: Text(
                           'Create New Account',
                           textAlign: TextAlign.center,
@@ -174,6 +188,7 @@ class LoginPage extends StatelessWidget {
                       )
                     ],
                   ),
+                  /*
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(5, 10, 5, 5),
                     child: TextFormField(
@@ -186,6 +201,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                   ),
+                  */
                 ),
               ),
               Positioned(
@@ -210,6 +226,7 @@ class LoginPage extends StatelessWidget {
                       )
                     ],
                   ),
+                  /*
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(5, 10, 5, 5),
                     child: TextFormField(
@@ -222,6 +239,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                   ),
+                  */
                 ),
               ),
               Positioned(
