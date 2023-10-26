@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "314826498578",
+    "project_id": "michelin-archives-3fa68",
+    "storage_bucket": "michelin-archives-3fa68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314826498578:android:e8f10f487c7c22989daecb",
+        "android_client_info": {
+          "package_name": "com.example.michelin_archives"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRcn897oCQnySuPcFNXGXioWc-hVQlJdY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314826498578:android:f8b236f5ee56f2549daecb",
+        "android_client_info": {
+          "package_name": "com.example.michelin_archives1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRcn897oCQnySuPcFNXGXioWc-hVQlJdY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
