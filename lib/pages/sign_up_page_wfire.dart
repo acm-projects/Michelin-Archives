@@ -34,6 +34,10 @@ class _SignUpState extends State<SignUpPage> {
       Navigator.of(context).push(MaterialPageRoute(builder: (context) => LoginPage()));
     }
   }
+  void _navigateToHome(BuildContext context) {
+  Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) => HomePage()));
+}
 
   Future<void> signInOrCreateUserWithEmailAndPassword() async {
     try {
@@ -151,7 +155,7 @@ class _SignUpState extends State<SignUpPage> {
             });
           },
           child: Text(
-            'Login!',
+            'Sign Up!',
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: Color.fromRGBO(0, 0, 0, 1),
