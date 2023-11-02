@@ -1,12 +1,13 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-//import 'package:michelin_archives/auth.dart';
-//import 'package:firebase_auth/firebase_auth.dart';
+import 'package:michelin_archives/auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 //NEW IMPORT!!!! (allows easy overlap of widgets)
 //ALSO NEEDS TO DOWNLOAD A LIBRARY
 //run this in the flutter terminal first --> 'flutter pub add assorted_layout_widgets'
 import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
+import 'package:michelin_archives/pages/recipe_doc.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -15,6 +16,11 @@ class LoginPage extends StatefulWidget {
   State<LoginPage> createState() => _LoginPageState();
 }
 
+// void _navigateToHome(BuildContext context) {
+//     Navigator.of(context).push(MaterialPageRoute(
+//         builder: (context) => HomePage())); ////CHANGE PAGE
+//   }
+
 class _LoginPageState extends State<LoginPage> {
   String? errorMessage = '';
   bool isLogin = true;
@@ -22,43 +28,26 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController _controllerEmail = TextEditingController();
   final TextEditingController _controllerPassword = TextEditingController();
 
-  /*Future<void> signInWithEmailAndPassword() async {
+  void _navigateToHome(BuildContext context) {
+    if (isLogin) {
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomePage()));
+    }
+  }
+
+  Future<void> signInOrCreateUserWithEmailAndPassword() async {
     try {
-      await Auth().signInWithEmailAndPassword(
-        email: _controllerEmail.text,
-        password: _controllerPassword.text,
-      );
+      if (isLogin) {
+        await Auth().signInWithEmailAndPassword(email: _controllerEmail.text, password: _controllerPassword.text);
+      } else {
+        await Auth().createUserWithEmailAndPassword(email: _controllerEmail.text, password: _controllerPassword.text);
+      }
     } on FirebaseAuthException catch (e) {
       setState(() {
+        isLogin = false;
         errorMessage = e.message;
       });
     }
   }
-
-  Future<void> createUserWithEmailAndPassword() async {
-    try {
-      await Auth().createUserWithEmailAndPassword(
-        email: _controllerEmail.text, 
-        password: _controllerPassword.text,
-      );
-    } on FirebaseAuthException catch (e) {
-      setState(() {
-        errorMessage = e.message;
-      });
-    }
-  }
-*/
-
-  ///TEMPORARY FUNCTION CREATED TO MAKE IT WORK
-  Future<void> tempFunction() async {
-    errorMessage = "hello";
-  }
-
-//Not necessary as we do not have an app bar
-/*  Widget _title() {
-    return const Text('Michelin Archives');
-  }
-*/
 
   Widget _entryField(
     String title,
@@ -157,7 +146,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
           onPressed: () {
             setState(() {
-              isLogin = !isLogin;
+              isLogin ? _navigateToHome(context) : null;
             });
           },
           child: Text(
